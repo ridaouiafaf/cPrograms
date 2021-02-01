@@ -5,25 +5,25 @@
 /*  URL = http://codeforces.com/problemset/problem/71/A */
 int main()
 {
-    int n, lenght;// n for how many words we want to enter, lenght is for each entered word's length(its letters number)
-    char *word; // we will be using it to stock each word we're dealing with while making it's abreviation.
+    int n, lenght; // n for how many words we want to enter, lenght is for each entered word's length(its letters number)
+    char *word;    // we will be using it to stock each word we're dealing with while making it's abreviation.
 
-    scanf("%d", &n);// stocking how many words we want
+    scanf("%d", &n); // stocking how many words we want
 
-    char words[n][110];// creating a char 2D table with n words and max 110 letters each.
+    char words[n][110]; // creating a char 2D table with n words and max 110 letters each.
 
     for (int i = 0; i < n; i++)
     {
-        scanf("%s", words[i]);// stocking words one by one untill we've done n words
+        scanf("%s", words[i]); // stocking words one by one untill we've done n words
     }
 
     printf("\n\n"); // space to see the before & after clearly
 
     for (int i = 0; i < n; i++) // browsing the words
     {
-        word = words[i]; // assigning the current word to the variable we mentionned before
-        lenght = strlen(word);// definig its length
-        if (lenght <= 10)// if it has 10 letter or less we don't do anything
+        word = words[i];       // assigning the current word to the variable we mentionned before
+        lenght = strlen(word); // definig its length
+        if (lenght <= 10)      // if it has 10 letter or less we don't do anything
         {
             printf("%s\n", word);
         }
