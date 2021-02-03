@@ -5,41 +5,25 @@
 int main()
 {
 
-    int n, m, a, i = 1;
-    int surface, flagstone, x, exit = 0;
-    scanf("%d %d %d", &n, &m, &a);
-    //printf("n= %d, m= %d, a= %d\n",n,m,a);
-    surface = n * m;
-    flagstone = a * a;
-    x = flagstone;
-
-
+    long long int n, m, a, fy=1,fx=1;
     
-    do
+    
+    scanf("%lld %lld %lld", &n, &m, &a);
+
+    int x=a, y=a;
+    
+    for (int i = 1; x < n; i++)
     {
-        if (x == surface)
-        {
-            printf("%d", i);
-            break;
-        }
+        x+=a;
+        fx++;
 
-        if (x < surface)
-        {
-            x = flagstone * i++;
-        }
-
-        if (x > surface)
-        {
-            int s = 1;
-            for (int j = 1; x < surface; j++)
-            {
-                s = surface * j;
-            }
-            printf("%d", i);
-            exit = 1;
-        }
-
-    } while (exit == 0);
+    }
+    for (int i = 1; y < m; i++)
+    {
+        y+=a;
+        fy++;
+    }
+    printf("%lld\n",fy*fx);
 
     return 0;
 }
