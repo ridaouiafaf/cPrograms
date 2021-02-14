@@ -24,6 +24,7 @@ int main()
         fy++;
     }
     printf("%lld\n",fy*fx);
+    
 
     return 0;
 }
