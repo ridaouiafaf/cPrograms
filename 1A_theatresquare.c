@@ -5,20 +5,20 @@
 int main()
 {
 
-    long long int n, m, a, fy=1,fx=1;
+    long long int i,n, m, a, fy=1ll,fx=1ll;
     
     
-    scanf("%lld %lld %lld", &n, &m, &a);
+    scanf("%d %d %d", &n, &m, &a);
 
     int x=a, y=a;
     
-    for (int i = 1; x < n; i++)
+    for (i = 1ll; x < n; i++)
     {
         x+=a;
         fx++;
 
     }
-    for (int i = 1; y < m; i++)
+    for (i = 1ll; y < m; i++)
     {
         y+=a;
         fy++;
